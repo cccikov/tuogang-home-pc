@@ -20,6 +20,29 @@ a {
   min-width: 1024px;
   min-height: 600px;
 }
+.section-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+.section-bottom a {
+  display: inline-block;
+  width: 63px;
+  height: 43px;
+  background: url(../img/down.png) no-repeat;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-name: bounce;
+  animation-name: bounce;
+  -webkit-transform-origin: center bottom;
+  transform-origin: center bottom;
+}
 /*第一页*/
 .section1 {
   background: url(../img/01bg.png) center no-repeat;
@@ -33,6 +56,7 @@ a {
   top: 30px;
   left: 0;
   width: 100%;
+  *width: 80%;
   padding: 0 60px;
 }
 .section1 .section1-top img {
@@ -52,6 +76,9 @@ a {
   font-size: 24px;
   color: #fff;
   text-decoration: none;
+}
+.section1 .section1-middle {
+  *margin: 300px 0 0;
 }
 .section1 .section1-middle .mid-text p {
   font-size: 46px;
@@ -84,10 +111,12 @@ a {
 }
 .section1 .section1-middle .mid-login .login-part {
   margin: 0 0 25px;
+  *text-align: center;
 }
 .section1 .section1-middle .mid-login .login-part input {
   box-sizing: border-box;
   width: 100%;
+  *width: 90%;
   padding: 12px 15px;
   font-size: 18px;
   border: 2px solid #adadad;
@@ -113,28 +142,12 @@ a {
 .section1 .section1-middle .mid-login .login-btn-wrap a#log:active {
   background: #47536D;
 }
-.section1 .section1-bottom {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  text-align: center;
+.section1 .section1-middle .mid-login .fgp {
+  margin: 12px 0 -12px;
+  text-align: right;
 }
-.section1 .section1-bottom a {
-  display: inline-block;
-  width: 63px;
-  height: 43px;
-  background: url(../img/down.png) no-repeat;
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-  -webkit-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
-  -webkit-animation-name: bounce;
-  animation-name: bounce;
-  -webkit-transform-origin: center bottom;
-  transform-origin: center bottom;
+.section1 .section1-middle .mid-login .fgp a {
+  color: #529CF9;
 }
 /*第二页*/
 .section2 {
@@ -148,6 +161,8 @@ a {
   text-align: center;
   background: rgba(0, 0, 0, 0.7);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#b2000000', endColorstr='#b2000000');
+  *display: inline-block;
+  *margin: 5% 0 0;
 }
 .section2 .section2-middle h2 {
   padding: 30px 0 60px;
@@ -162,11 +177,13 @@ a {
   position: absolute;
   top: 4%;
   width: 100%;
+  *width: 70%;
   font-size: 40px;
   text-align: center;
 }
 .section3 .section3-wrap {
   position: relative;
+  *top: 50px;
   width: 70%;
   min-width: 1024px;
   height: 80%;
@@ -286,6 +303,8 @@ a {
   height: 479px;
   width: 460px;
   text-align: left;
+  *position: static ;
+  *margin: 20% auto 0;
 }
 .section4 .section4-right .section4-wrap h5 {
   font-size: 28px;
@@ -311,6 +330,7 @@ a {
 .section5 .section5-middle {
   position: relative;
   top: -30px;
+  *top: 10%;
 }
 .section5 .section5-middle h2 {
   margin: 0 0 50px;
