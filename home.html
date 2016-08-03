@@ -12,6 +12,7 @@
     <script src="js/jquery.easing.min.js"></script>
     <script>
     $(function() {
+    	var timerArr = [];
         $('#dowebok').fullpage({
 
             afterLoad: function(anchorLink, index) {
@@ -21,8 +22,8 @@
                 if (index == 3) {
                     $(".section3 .willUpE").each(function(index,key){
                         $(key).removeClass("up");
-                        setTimeout(function(){
-                            $(key).removeClass("down").addClass("up");
+                        timerArr[index] = setTimeout(function(){
+                            $(key).addClass("up");
                         },index*100);
                     });
                 }
@@ -42,15 +43,20 @@
             if (index == '2') {
                 setTimeout(function(){
                     $(".section2-middle").removeClass("animated bounceInLeft");
-                },500)
+                },500);
             }
             if (index == '3') {
-                $(".section3 .willUpE").removeClass("up").addClass("down");
+            	for(var i=0;i<timerArr.length;i++){
+            		clearTimeout(timerArr[i]);
+            	}
+                setTimeout(function(){
+	                $(".section3 .willUpE").removeClass("up");
+                },500);
             }
             if (index == '4') {
                 setTimeout(function(){
                     $(".section4-right").removeClass("animated flash");
-                },500)
+                },500);
             }
             if(index==5){
                 setTimeout(function(){
